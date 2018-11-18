@@ -1,0 +1,30 @@
+
+@mixin rotate() {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.btc-icon {
+  height: 300px;
+  width: 300px;
+  border-radius: 100%;
+  background-image: url("../../../assets/btcIcon.png");
+  background-position: center;
+  background-size: 400px 400px;
+  animation: btc-spin infinite 3s linear;
+}
+
+.close {
+  display: inline;
+  color: red;
+  cursor: pointer;
+}
+
+@keyframes btc-spin { @include rotate(); }
+@-webkit-keyframes btc-spin { @include rotate(); }
+@-moz-keyframes btc-spin { @include rotate(); }
+@-o-keyframes btc-spin { @include rotate(); }
