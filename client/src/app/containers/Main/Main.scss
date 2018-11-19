@@ -1,0 +1,65 @@
+$color_trasparent_black02: rgba(0, 0, 0, 0.2);
+$color_trasparent_black03: rgba(0, 0, 0, 0.3);
+$color_transparent_white: rgba(255,255,255,0.2);
+
+$url_btc: url("../../../assets/btcIcon.png");
+
+
+@mixin rotate() {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.btc-icon {
+  height: 200px;
+  width: 200px;
+  margin: 20px 0;
+  border-radius: 100%;
+  background-image: $url_btc;
+  background-position: center;
+  background-size: 250px 250px;
+  animation: btc-spin infinite 3s linear;
+}
+
+.btc-input {
+  text-align: center;
+  width: 180px;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 28px;
+}
+
+.dropdown-button {
+  width: 200px;
+  padding: 5px;
+  margin-bottom: 20px;
+  border: 3px solid $color_transparent_white;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow:inset 0 0 4px 2px $color_trasparent_black02;
+  cursor: pointer;
+  &:hover {
+    box-shadow:inset 0 0 4px 2px $color_trasparent_black03;
+  }
+  &:active {
+    box-shadow: 0 0 3px 3px $color_trasparent_black03;
+  }
+}
+
+@keyframes btc-spin { @include rotate() }
+@-webkit-keyframes btc-spin { @include rotate() }
+@-moz-keyframes btc-spin { @include rotate() }
+@-o-keyframes btc-spin { @include rotate() }

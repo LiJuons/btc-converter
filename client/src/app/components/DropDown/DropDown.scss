@@ -1,0 +1,22 @@
+$color_green_yellow: rgb(143, 255, 37);
+$color_transparent_white: rgba(255,255,255,0.2);
+
+.dropdown-list {
+  width: 200px;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown-list > div {
+  width: 150px;
+  padding: 8px;
+  border-bottom: 1px solid $color_transparent_white;
+  cursor: pointer;
+}
+.dropdown-list > div > span {
+  color: $color_green_yellow;
+}

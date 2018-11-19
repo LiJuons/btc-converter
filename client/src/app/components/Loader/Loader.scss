@@ -1,0 +1,29 @@
+$color_carrot_orange: rgb(255, 161, 55);
+
+@mixin extend() {
+  0%   {width: 110px;}
+  33%  {width: 118px;}
+  66%  {width: 125px;}
+  100% {width: 135px;}
+}
+
+.loader-container {
+  align-self: center;
+  width: 120px;
+}
+
+.loading {
+  align-self: flex-start;
+  min-width: 110px;
+  margin-top: 40px;
+  overflow: hidden;
+  text-align: right;
+  font-size: 32px;
+  animation: loader-extend infinite 0.8s linear;
+  color: $color_carrot_orange;
+}
+
+@keyframes loader-extend { @include extend() }
+@-webkit-keyframes loader-extend { @include extend() }
+@-moz-keyframes loader-extend { @include extend() }
+@-o-keyframes loader-extend { @include extend() }
